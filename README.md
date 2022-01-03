@@ -1,10 +1,12 @@
 # Windows Registry Forensics Cheat Sheet
 
+```
 Load the appropriate hives in the software of your choice and follow these conventions for this cheatsheet:\
 "" - Indicates the field value to look for.\
 '' - Indicates the arbitrary placeholder for identifiers.\
 {} - Indicates the arbitrary placeholder for GUID.\
 () - Extra relevant information.
+```
 
 Control Set:\
 &emsp;System > Select > "Current"
