@@ -22,14 +22,14 @@ Current Timezone:\
 
 System Install Date:\
 `Software > Microsoft > WindowsNT > CurrentVersion > "InstallDate"`\
-<b>NOTE:- Decode it from Unix format.
+NOTE:- Decode it from Unix format.
 
 Last Logged On User:\
 `Software > Microsoft > Windows > CurrentVersion > Authentication > LogonUI > "LastLoggedOnUser"`
 
 Last Shutdown Time:\
 `System > ControlSetXXX > Control > Windows > "ShutdownTime"`\
-<b>NOTE:- Decode it from Hex format.
+NOTE:- Decode it from Hex format.
 
 Autostart Applications:\
 `NTUSER.dat > Software > Microsoft > Windows > CurrentVersion > Run`
@@ -51,7 +51,7 @@ User Created Accounts (Look for Relative Identifiers > 1000):\
 
 Machine Identifier (Last 12 bytes):\
 `SAM > Domains > Account > "V"`\
-<b>NOTE:- Group into 3 sets of 4, convert to little endian and convert from hex to dec.
+NOTE:- Group into 3 sets of 4, convert to little endian and convert from hex to dec.
 
 USB devices connected:\
 `System > ControlSetXXX > Enum > USBSTOR`
@@ -70,4 +70,4 @@ Last executed time of applications:\
 
 Pagefile cleared at shutdown? (Used for swapping RAM):\
 `System > ControlSetXXX > Control > Session Manager > Memory Management > "ClearPageFileAtShutdown"`\
-<b>NOTE:- If value is 0, then look for the pagefile.sys file for the memory capture.
+NOTE:- If value is 0, then look for the pagefile.sys file for the memory capture.
