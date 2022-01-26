@@ -12,23 +12,26 @@ Load the appropriate hives in the software of your choice and follow these conve
 ---
 
 Control Set:\
-`System > Select > "Current"`
+`SYSTEM > Select > "Current"`
 
 Computer Name:\
-`System > ControlSetXXX > Control > ComputerName > "ComputerName"`
+`SYSTEM > ControlSetXXX > Control > ComputerName > "ComputerName"`
 
 Current Timezone:\
-`System > ControlSetXXX > Control > TimeZoneInformation > "TimeZoneKeyName"`
+`SYSTEM > ControlSetXXX > Control > TimeZoneInformation > "TimeZoneKeyName"`
+
+Operating System Bit Version:\
+`SOFTWARE > Microsoft > Windows NT > CurrentVersion > "BuildLabEx"`
 
 System Install Date:\
-`Software > Microsoft > WindowsNT > CurrentVersion > "InstallDate"`\
+`SOFTWARE > Microsoft > WindowsNT > CurrentVersion > "InstallDate"`\
 NOTE:- Decode it from Unix format.
 
 Last Logged On User:\
-`Software > Microsoft > Windows > CurrentVersion > Authentication > LogonUI > "LastLoggedOnUser"`
+`SOFTWARE > Microsoft > Windows > CurrentVersion > Authentication > LogonUI > "LastLoggedOnUser"`
 
 Last Shutdown Time:\
-`System > ControlSetXXX > Control > Windows > "ShutdownTime"`\
+`SYSTEM > ControlSetXXX > Control > Windows > "ShutdownTime"`\
 NOTE:- Decode it from Hex format.
 
 Autostart Applications:\
@@ -54,13 +57,13 @@ Machine Identifier (Last 12 bytes):\
 NOTE:- Group into 3 sets of 4, convert to little endian and convert from hex to dec.
 
 USB devices connected:\
-`System > ControlSetXXX > Enum > USBSTOR`
+`SYSTEM > ControlSetXXX > Enum > USBSTOR`
 
 Serial Number of USB device mounted:\
-`System > MountedDevices`
+`SYSTEM > MountedDevices`
 
 Network Connections:\
-`Software > Microsoft > Windows NT > CurrentVersion > NetworkList`
+`SOFTWARE > Microsoft > Windows NT > CurrentVersion > NetworkList`
 
 Install date of applications:\
 `Amcache.hve > {GUID} > InventoryApplication > 'ProgramID' > "InstallDate"`
@@ -69,5 +72,5 @@ Last executed time of applications:\
 `NTUSER.dat > Software > Microsoft > Windows > CurrentVersion > Explorer > UserAssist> {GUID} (ROT13 encoded)`
 
 Pagefile cleared at shutdown? (Used for swapping RAM):\
-`System > ControlSetXXX > Control > Session Manager > Memory Management > "ClearPageFileAtShutdown"`\
+`SYSTEM > ControlSetXXX > Control > Session Manager > Memory Management > "ClearPageFileAtShutdown"`\
 NOTE:- If value is 0, then look for the pagefile.sys file for the memory capture.
