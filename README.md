@@ -62,6 +62,12 @@ USB devices connected:\
 Serial Number of USB device mounted:\
 `SYSTEM > MountedDevices`
 
+Physical Network Cards:\
+`SOFTWARE > Microsoft > Windows NT > CurrentVersion > NetworkCards`
+
+Network Interfaces:\
+`SYSTEM > ControlSetXXX > Services > Tcpip > Parameters > Interfaces`
+
 Network Connections:\
 `SOFTWARE > Microsoft > Windows NT > CurrentVersion > NetworkList`
 
